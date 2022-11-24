@@ -1,0 +1,22 @@
+<table class="table table-dark table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Classe</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let item of table">
+      <td>{{item.id}}</td>
+      <td>{{item.Prenom}}</td>
+      <td>{{item.Nom}}</td>
+      <td>{{item.Classe}}</td>
+      <td><button type="button" class="btn btn-light" (click)="modify()">Modifier</button></td>
+      <td><button type="button" class="btn btn-light" (click)="delete()">Supprimer</button></td>
+  </tbody>
+</table>
+<button type="button" class="btn btn-secondary" routerLink="ajout">Ajouter</button>
